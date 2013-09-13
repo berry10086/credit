@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "zh-cn">
+
+  	<head>
+	    <meta charset="utf-8">
+	    <title>积分查询</title>
+
+	    <!-- Le styles -->
+	    <link href="static/css/bootstrap.css" rel="stylesheet">
+	    <style>
+	      body {
+	        padding-top: 100px; /* 60px to make the container go all the way to the bottom of the topbar */
+	      }
+	    </style>
+	    <link href="static/css/bootstrap-responsive.css" rel="stylesheet">
+
+	    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	    <script src="static/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+	    {% block extrahead %}
+	    {% endblock %}
+	    <script type="text/javascript">
+	    $(function(){
+	    {% block jquery %}
+	    {% endblock %}
+	    });
+	    </script>
+  	</head>
+	<body>
+		<div class="hero-unit">
+		  	<h2 align="center">EEA体育</h2>
+		  	<p style="color:#777" align = "center">只有运动才可以除去各种各样的疑虑。 ——歌德 </p>
+		  	<br><br>
+		  	<p>
+		    	<form action = "/search/" method = "get" class="form-search" align = "center">
+					<input type = "text" name = q placeholder="在这里输入学号" class="input-large search-query" pattern = "\d{10}"required >
+					<!--input type = "submit" value ="Search"-->
+					<button type="submit" class="btn">Search</button>
+				</form>
+		  	</p>
+		</div>
+	</body>
+</html>
